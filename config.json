@@ -1,0 +1,122 @@
+{
+  "pilot_req_vel_yaw": {
+    "include": "True",
+    "topic": "/pilot/velocity_req",
+    "field_path": "msg.velocity[-1]",
+    "lambda": "None"
+  },
+  "pilot_req_pos_north": {
+    "include": "True",
+    "topic": "/pilot/position_req",
+    "field_path": "msg.position[0]",
+    "lambda": "None"
+  },
+  "pilot_req_pos_east": {
+    "include": "True",
+    "topic": "/pilot/position_req",
+    "field_path": "msg.position[1]",
+    "lambda": "None"
+  },
+  "pilot_req_pos_depth": {
+    "include": "True",
+    "topic": "/pilot/position_req",
+    "field_path": "msg.position[2]",
+    "lambda": "None"
+  },
+  "pilot_req_pos_yaw": {
+    "include": "True",
+    "topic": "/pilot/position_req",
+    "field_path": "msg.position[-1]",
+    "lambda": "lambda x: x"
+  },
+  "pilot_force_sway": {
+    "include": "True",
+    "topic": "/pilot/forces",
+    "field_path": "msg.values[1]",
+    "lambda": "lambda x: x / 5.0"
+  },
+  "pilot_force_yaw": {
+    "include": "True",
+    "topic": "/pilot/forces",
+    "field_path": "msg.values[-1]",
+    "lambda": "lambda x: x / 5.0"
+  },
+  "nav_north": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.position.north",
+    "lambda": "None"
+  },
+  "nav_east": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.position.east",
+    "lambda": "None"
+  },
+  "nav_depth": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.position.depth",
+    "lambda": "None"
+  },
+  "nav_pitch": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.orientation.pitch",
+    "lambda": "None"
+  },
+  "nav_yaw": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.orientation.yaw",
+    "lambda": "None"
+  },
+  "nav_yaw_rate": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.orientation_rate.yaw",
+    "lambda": "None"
+  },
+  "nav_surge_rate": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.body_velocity.x",
+    "lambda": "None"
+  },
+  "nav_sway_rate": {
+    "include": "True",
+    "topic": "/nav/nav_sts",
+    "field_path": "msg.body_velocity.y",
+    "lambda": "None"
+  },
+  "behaviours_goal_north": {
+    "include": "True",
+    "topic": "/behaviours/goal",
+    "field_path": "msg.goal_velocity.values[0]",
+    "lambda": "lambda x: x"
+  },
+  "behaviours_goal_east": {
+    "include": "True",
+    "topic": "/behaviours/goal",
+    "field_path": "msg.goal_velocity.values[1]",
+    "lambda": "lambda x: x"
+  },
+  "behaviours_goal_depth": {
+    "include": "True",
+    "topic": "/behaviours/goal",
+    "field_path": "msg.goal_velocity.values[2]",
+    "lambda": "lambda x: x"
+  },
+  "behaviours_goal_pitch": {
+    "include": "True",
+    "topic": "/behaviours/goal",
+    "field_path": "msg.goal_velocity.values[-2]",
+    "lambda": "lambda x: x"
+  },
+  "behaviours_goal_yaw": {
+    "include": "True",
+    "topic": "/behaviours/goal",
+    "field_path": "msg.goal_velocity.values[-1]",
+    "lambda": "lambda x: x"
+  }
+}
